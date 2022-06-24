@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <h1>Numbers</h1>
+    <div class="row">
+        <div class="col-md-4">
+            <table class="table table-striped table-hover">
+                <thead>
+                <th>Заказ №</th>
+                <th>стоимость в USD</th>
+                <th>стоимость в RUB</th>
+                <th>срок поставки</th>
+                </thead>
+                <tbody>
+                {% for object in object_list %}
+                    <tr>
+                    <td><strong>{{ object.order_number }} </strong></td>
+                    <td><strong>{{ object.price_in_usd}}</strong></td>
+                    <td><strong>{{ object.price_in_rub}}</strong></td>
+                    <td><strong>{{ object.date_to_delivery}}</strong></td>
+                    </tr>
+                {% endfor %}
+                </tbody>
+            </table>
+        <div>
+    </div>
+
+</body>
+</html>
