@@ -1,11 +1,11 @@
-##KanalService.
+##NumbersTest.
 https://docs.google.com/spreadsheets/d/1x3q1Tkj4I_gViKM0SNQpMZwqN66QwoNDXDFuzU8oJR8/edit#gid=0
 ###Instruction how-to quickly setup:
 
-1. ```git clone https://github.com/Zarbul/kanalservice.git/```
+1. ```git clone https://github.com/Zarbul/numbers_test.git```
 2. Install requierements:
-   * ```pip install -r requirements.txt```
-3. Добавил файл .env чтобы было легче запустить, а так конечно его сюда не надо :)
+   * ```pip install -r req.txt```
+3. Добавил файл образец .env
 4. Make migrations
 ```
 ./manage.py makemigrations
@@ -17,11 +17,11 @@ https://docs.google.com/spreadsheets/d/1x3q1Tkj4I_gViKM0SNQpMZwqN66QwoNDXDFuzU8o
 * ```sudo docker run -d --hostname rabbitmq --log-driver=journald --name rabbitmq -p 5672:5672 -p 15672:15672 -p 15674:15674 -p 25672:25672 -p 61613:61613 -v rabbitmq_data:/var/lib/rabbitmq rabbitmq:3.9-management```
 * ```sudo docker exec -it rabbitmq /bin/bash```
 * #### Create user and password:
-* ```rabbitmqctl add_user kanalservice kanalservice2022```
+* ```rabbitmqctl add_user numbers numbers2022```
 * #### Create virtualhost:
-* ```rabbitmqctl add_vhost kanalservicehost```
+* ```rabbitmqctl add_vhost numbershost```
 * #### Setting Permissions:
-* ```rabbitmqctl set_permissions -p "kanalservicehost" "kanalservice" ".*" ".*" ".*"```
+* ```rabbitmqctl set_permissions -p "numbershost" "numbers" ".*" ".*" ".*"```
 * ####проверяем список оставшихся юзеров
 * ```rabbitmqctl list_users```
 * ####Удаляем всех ненужных (особенно базовый - guest)
